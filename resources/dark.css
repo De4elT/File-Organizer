@@ -1,0 +1,22 @@
+private fun darkCss(): String {
+                         val css = """
+                         .root            { -fx-background-color: #1e1e1e; }
+                         .label,.check-box,.button,.table-row-cell,
+                         .table-column-header,.text-field{
+                             -fx-text-fill:#d4d4d4;-fx-font-family:"Segoe UI",sans-serif;
+                         }
+                         .button      { -fx-background-color:#0e639c; }
+                         .table-view,
+                         .table-row-cell{
+                             -fx-control-inner-background:#252526;
+                             -fx-background-color:#1e1e1e;
+                         }
+                         .table-column-header,
+                         .table-view .column-header-background{
+                             -fx-background-color:#1e1e1e;
+                         }
+                     """.trimIndent()
+                     return "data:text/css," + css
+                     .replace(" ", "%20")
+                     .replace("\n", "%0A")
+                     }
